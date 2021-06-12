@@ -23,9 +23,4 @@ target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC
 
 target_link_libraries(${PROJECT_NAME} PUBLIC notSofiaLib)
 
-set(SYSTEM_NEW_TOOLCHAIN_LIBS_PATH "/usr/lib/notSofia")
-
-# тулчёйн самосборный, либы все новые и их надо в отдельное место в системе положить
-# и бинарнику сказать где искать это всё
-set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS
-    "-Wl,-rpath,${SYSTEM_NEW_TOOLCHAIN_LIBS_PATH} -Wl,--dynamic-linker=${SYSTEM_NEW_TOOLCHAIN_LIBS_PATH}/ld-uClibc.so.1")
+set_elf_rpath_and_ld_path(${PROJECT_NAME})
