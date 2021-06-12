@@ -1,0 +1,3 @@
+[submodule "notSofiaLib"]
+	path = notSofiaLib
+	url = https://github.com/4e4o/notSofiaLib.git
