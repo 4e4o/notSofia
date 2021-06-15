@@ -1,6 +1,6 @@
 #include <Application.h>
 
-int main() {
-    Application app;
+int main(int count, char **argv) {
+    Application app(count, argv);
     return app.run();
 }
