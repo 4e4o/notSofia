@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.5)
 
 project(notSofia LANGUAGES CXX C)
 
-add_subdirectory(notSofiaLib)
-
 set(CMAKE_VERBOSE_MAKEFILE ON)
+
+add_subdirectory(notSofiaLib)
 
 # used compiler:
 # blabla/Hi3520D_SDK_V1.0.5.1/osdrv/toolchain/arm-hisiv100nptl-linux/install/opt/hisi-linux-nptl/arm-hisiv100-linux/bin/arm-hisiv100-linux-uclibcgnueabi-gcc
